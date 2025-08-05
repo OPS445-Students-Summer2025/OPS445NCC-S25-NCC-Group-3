@@ -11,7 +11,7 @@ def generate_report(username=None):
             user = pwd.getpwnam(username)
             users.append(user)
         except KeyError:
-            print(f"User '{username}' not found.")
+            print("User '" + username + "' not found.")
             sys.exit(1)
     else:
         users = pwd.getpwall()
