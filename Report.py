@@ -8,7 +8,11 @@ def generate_report(username=None):
     users = []
     if username:
         all_users = pwd.getpwall()
-        user = next((u for u in all_users if u.pw_name == username), None)
+        user = None
+        for u in all_users:
+            if u.pw_name == username:
+                user = u
+                break
         if user:
             users.append(user)
         else:
