@@ -16,7 +16,7 @@ def generate_report(username=None):
         if user:
             users.append(user)
         else:
-            print(f"User '{username}' not found.")
+            print("User '" + username + "' not found.")
             sys.exit(1)
     else:
         users = pwd.getpwall()
