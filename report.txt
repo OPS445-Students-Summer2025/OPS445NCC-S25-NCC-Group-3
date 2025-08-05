@@ -1,0 +1,8 @@
+User Report
+-----------
+Username: swaghela
+UID: 7472
+GID: 100
+Home Dir: /home/swaghela
+Shell: /bin/bash
+

@@ -37,7 +37,7 @@ def main():
             with open(args.output, "w") as f:
                 sys.stdout = f
                 generate_report(args.user)
-            sys.stdout = sys._stdout_
+            sys.stdout = sys.__stdout__
             print(f"Report saved to {args.output}")
         except Exception as e:
             print("Failed to write to file:", e, file=sys.stderr)
@@ -45,5 +45,6 @@ def main():
     else:
         generate_report(args.user)
 
-if _name_ == "_main_":
-    main()
+if __name__ == "__main__":
+    main()
+
