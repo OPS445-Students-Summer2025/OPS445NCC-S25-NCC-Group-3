@@ -7,11 +7,12 @@ import sys
 def generate_report(username=None):
     users = []
     if username:
-        try:
-            user = pwd.getpwnam(username)
+        all_users = pwd.getpwall()
+        user = next((u for u in all_users if u.pw_name == username), None)
+        if user:
             users.append(user)
-        except KeyError:
-            print("User '" + username + "' not found.")
+        else:
+            print(f"User '{username}' not found.")
             sys.exit(1)
     else:
         users = pwd.getpwall()
