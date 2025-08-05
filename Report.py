@@ -26,3 +26,9 @@ def generate_report(username=None):
         print("Shell:", u.pw_shell)
         print()
 
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-u", "--user", default=None)
+    parser.add_argument("-o", "--output", default=None)
+    args = parser.parse_args()
+
