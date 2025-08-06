@@ -11,36 +11,36 @@ import sys
 def create_user(username: str) -> None:
     """Add a new user to the system."""
     try:
-        subprocess.check_call(["sudo", "useradd", username])  # create user
-        print(f"User '{username}' added successfully.")
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to add user '{username}': {e}", file=sys.stderr)
+        subprocess.check_call(["sudo", "useradd", username])  # Subprocess.check_call() runs the command and waits for it to finish
+        print(f"User '{username}' added successfully.") # Print the output
+    except subprocess.CalledProcessError as e: # If command fails, it will raise CalledProcessError if command returns a nonzero exit status
+        print(f"Failed to add user '{username}': {e}", file=sys.stderr) # Save the error in e and print e
     except Exception as e:
-        print(f"Unknown error occurred: {e}", file=sys.stderr)
+        print(f"Unknown error occurred: {e}", file=sys.stderr) # If it's not then print here
 
 
 def delete_user(username: str) -> None:
     """Remove an existing user from the system."""
     try:
-        subprocess.check_call(["sudo", "userdel", username])   # delete user
-        print(f"User '{username}' deleted successfully.")
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to delete user '{username}': {e}", file=sys.stderr)
+        subprocess.check_call(["sudo", "userdel", username])   # Subprocess.check_call() runs the command and waits for it to finish
+        print(f"User '{username}' deleted successfully.") # Print the output
+    except subprocess.CalledProcessError as e: # If the command fails, it will raise CalledProcessError
+        print(f"Failed to delete user '{username}': {e}", file=sys.stderr) # Save the error in e and print e
     except Exception as e:
-        print(f"Unknown error occurred: {e}", file=sys.stderr)
+        print(f"Unknown error occurred: {e}", file=sys.stderr) # If it's not then print here
 
 
 def list_human_users() -> None:
     """List all human-account usernames (UID ≥ 1000)."""
     try:
-        output = subprocess.check_output(["getent", "passwd"], text=True) # pull passwd
-        for line in output.splitlines():
+        output = subprocess.check_output(["getent", "passwd"], text=True) # Use subprocess.check_output() to execute the getent command, which grab the information from system password database.
+        for line in output.splitlines(): # Grab the output from subprocess, root:x:0:0:root:/root:/bin/bash
             username, _, uid, *_ = line.split(":", 3)
             if uid.isdigit() and int(uid) >= 1000:           # skip system accounts
-                print(username)
-    except subprocess.CalledProcessError:
-        print("Failed to list users.", file=sys.stderr)
-    except FileNotFoundError:
+                print(username)    # Use for loop to print username one by one
+    except subprocess.CalledProcessError: # If the system does not have getent, it will raise CalledProcessError
+        print("Failed to list users.", file=sys.stderr) # Print the error
+    except FileNotFoundError:  # Catch multiple exceptions
         print("getent not found on this system.", file=sys.stderr)
     except Exception as e:
         print(f"Unknown error occurred: {e}", file=sys.stderr)
