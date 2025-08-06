@@ -7,6 +7,9 @@ from generate_report import generate_report
 from assignment2_mzaman30 import login_activity_analyzer
 from assignment2_dmbenjamin import create_user, delete_user, list_human_users
 
+import sys
+import pwd
+import subprocess
 import argparse
 
 # Main function to integrate all scripts
