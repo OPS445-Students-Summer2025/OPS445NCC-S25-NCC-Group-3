@@ -19,7 +19,6 @@ This functionality is useful for detecting misconfigurations or security risks r
 
 ### How to Run
 
-```bash
 # To list all non-system users:
 python3 assignment2.py report --list-non-system
 
@@ -34,7 +33,7 @@ https://docs.python.org/3/library/argparse.html
 https://man7.org/linux/man-pages/man5/passwd.5.html
 
 https://docs.python.org/3/tutorial/controlflow.html#for-statements
-```bash
+
 
 
 **Contributor:** Md. Shahriar Zaman (mzaman30)  
