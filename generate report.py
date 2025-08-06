@@ -2,7 +2,6 @@
 #Citations
 #https://docs.python.org/3/library/pwd.html
 #https://coderivers.org/blog/python-pwd/
-#https://www.geeksforgeeks.org/python/how-to-print-to-stderr-and-stdout-in-python/
 
 import argparse
 import pwd  
