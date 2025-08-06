@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-# Import statements from individual files
 from scan_user_privileges import scan_user_privileges
 from user_report import get_non_system_users, find_duplicate_homes
 from generate_report import generate_report
@@ -9,7 +8,6 @@ from assignment2_dmbenjamin import create_user, delete_user, list_human_users
 
 import argparse
 
-# Main function to integrate all scripts
 def main():
     parser = argparse.ArgumentParser(description="Integrated User Management Toolkit")
 
