@@ -25,8 +25,10 @@ def generate_report(username=None):
     print("-----------")
     for u in users:
         print("Username:", u.pw_name)
+        print("Encrypted password:", u.pw_passwd)
         print("UID:", u.pw_uid)
         print("GID:", u.pw_gid)
+        print("User name/comment:", u.pw_gecos)
         print("Home Dir:", u.pw_dir)
         print("Shell:", u.pw_shell)
         print()
@@ -38,15 +40,13 @@ def main():
     args = parser.parse_args()
 
     if args.output:
-        try:
-            with open(args.output, "w") as f:
-                sys.stdout = f
-                generate_report(args.user)
-            sys.stdout = sys.__stdout__
-            print(f"Report saved to {args.output}")
-        except Exception as e:
-            print("Failed to write to file:", e, file=sys.stderr)
-            sys.exit(1)
+        with open(args.output, "w") as f:
+            # Send each print to the file
+            original_stdout = sys.stdout
+            sys.stdout = f
+            generate_report(args.user)
+            sys.stdout = original_stdout
+        print("Report saved to " + args.output)
     else:
         generate_report(args.user)
 
