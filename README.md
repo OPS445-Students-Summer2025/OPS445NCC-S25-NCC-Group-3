@@ -27,6 +27,33 @@ The following official resources were used to implement the login activity analy
    - [`subprocess` module](https://docs.python.org/3/library/subprocess.html)  
    - [`datetime` module](https://docs.python.org/3/library/datetime.html)  
 
+**Contributor:** Darian Benjamin (dmbenjamin)  
+**Role:** User Management Tool (Part 4)  
+**Course:** OPS445 – Summer 2025 (Professor Eric Brauer)  
+
+---
+## About This Assignment
+
+This branch implements the **User Management Tool**, which is **Part 4** of our group project:  
+
+1. Create a user:
+    `python3 assignment2.py user-mgmt create --username ben`
+
+2. Delete a user:
+    `python3 assignment2.py user-mgmt delete --username ben`
+
+3. List all human users:
+    `python3 assignment2.py user-mgmt list`
+
+---
+
+## Research and References
+
+The following official resources were used to implement the user management tool:  
+
+1. Youtube video - (https://www.youtube.com/watch?v=-Sgw-6a1HjU&t=307s)
+2. Python Standard Library Documentation:  
+   - [`argparse` module](https://docs.python.org/3/library/argparse.html)
 **Contributor:** Samarth Waghela (swaghela)  
 **Role:** CLI and generate report (Part 5)  
 **Course:** OPS445 – Summer 2025 (Professor Eric Brauer)  
@@ -37,7 +64,7 @@ The following official resources were used to implement the login activity analy
 
 The code in the last part of the assignment is supposed to generate a final report which will cover all the details that can be obtained from the user database.
 
-- A specific user ddetails 
+- A specific user details 
 - All the users in the database
 - Gives output to file options
 ---
