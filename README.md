@@ -115,6 +115,4 @@ The following official resources were used to implement the report generator:
    (https://docs.python.org/3/library/pwd.html)
    (https://coderivers.org/blog/python-pwd/)
                                     
-                                   
-3. help with stderr
-   - (https://www.geeksforgeeks.org/python/how-to-print-to-stderr-and-stdout-in-python/)
+   
