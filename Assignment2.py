@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
+#Citations
+#https://docs.python.org/3/library/pwd.html
+#https://coderivers.org/blog/python-pwd/
+#https://www.geeksforgeeks.org/python/how-to-print-to-stderr-and-stdout-in-python/
 
 import argparse
-import pwd
+import pwd  
 import sys
 
 def generate_report(username=None):
