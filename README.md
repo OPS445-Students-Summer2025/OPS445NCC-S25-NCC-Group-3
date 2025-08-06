@@ -34,7 +34,7 @@ https://man7.org/linux/man-pages/man5/passwd.5.html
 
 https://docs.python.org/3/tutorial/controlflow.html#for-statements
 
-
+---
 
 **Contributor:** Md. Shahriar Zaman (mzaman30)  
 **Role:** Login Activity Analyzer (Part 2)  
@@ -89,6 +89,9 @@ The following official resources were used to implement the user management tool
 1. Youtube video - (https://www.youtube.com/watch?v=-Sgw-6a1HjU&t=307s)
 2. Python Standard Library Documentation:  
    - [`argparse` module](https://docs.python.org/3/library/argparse.html)
+
+---
+
 **Contributor:** Samarth Waghela (swaghela)  
 **Role:** CLI and generate report (Part 5)  
 **Course:** OPS445 – Summer 2025 (Professor Eric Brauer)  
