@@ -41,7 +41,6 @@ def main():
 
     if args.output:
         with open(args.output, "w") as f:
-            # Send each print to the file
             original_stdout = sys.stdout
             sys.stdout = f
             generate_report(args.user)
