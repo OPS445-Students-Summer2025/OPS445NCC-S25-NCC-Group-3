@@ -23,5 +23,6 @@ The following official resources were used to implement the report generator:
    (https://coderivers.org/blog/python-pwd/)
                                     
                                    
-3. help with stderr
-   - (https://www.geeksforgeeks.org/python/how-to-print-to-stderr-and-stdout-in-python/)
+## Assignment2.py citations:
+https://docs.python.org/3/library/argparse.html#sub-commands
+https://dnmtechs.com/using-argparse-subparsers-correctly-in-python-3-programming/
