@@ -76,4 +76,6 @@ if __name__ == "__main__":
     main()
 
 
-# Youtube video I used - https://www.youtube.com/watch?v=-Sgw-6a1HjU&t=307s
+# Citations
+# Youtube video - https://www.youtube.com/watch?v=-Sgw-6a1HjU&t=307s
+# Website - https://docs.python.org/3/library/argparse.html
