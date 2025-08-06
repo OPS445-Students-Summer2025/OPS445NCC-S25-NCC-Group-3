@@ -1,6 +1,40 @@
 # Winter 2025 Assignment 2
 # OPS445 Assignment 2 – User Report and Management
 
+## Author
+Koshish Adhikari  
+Seneca ID: kadhikari9
+
+## Description
+
+This module is part of the **User Security & Management Suite** assignment. It focuses on generating a security report by:
+
+- Listing **all non-system users** (UID ≥ 1000 and ≠ 65534) on the system.
+- Detecting if **any home directories are shared** by multiple users (potential security concern).
+
+The data is collected by parsing `/etc/passwd`, which stores user account information in Linux systems.
+
+
+## How to Use
+
+Run one of the following commands:
+
+```bash
+# List non-system users
+python3 assignment2.py report --list-non-system
+
+# Find shared home directories
+python3 assignment2.py report --duplicate-homes
+
+
+#REFRENCES
+https://docs.python.org/3/library/argparse.html
+
+https://man7.org/linux/man-pages/man5/passwd.5.html
+
+https://docs.python.org/3/tutorial/controlflow.html#for-statements
+
+
 **Contributor:** Md. Shahriar Zaman (mzaman30)  
 **Role:** Login Activity Analyzer (Part 2)  
 **Course:** OPS445 – Summer 2025 (Professor Eric Brauer)  
@@ -26,7 +60,7 @@ The following official resources were used to implement the login activity analy
    - [`pwd` module](https://docs.python.org/3/library/pwd.html)  
    - [`subprocess` module](https://docs.python.org/3/library/subprocess.html)  
    - [`datetime` module](https://docs.python.org/3/library/datetime.html)  
-
+---
 **Contributor:** Darian Benjamin (dmbenjamin)  
 **Role:** User Management Tool (Part 4)  
 **Course:** OPS445 – Summer 2025 (Professor Eric Brauer)  
