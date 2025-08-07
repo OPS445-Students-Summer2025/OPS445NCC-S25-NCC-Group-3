@@ -114,5 +114,7 @@ The following official resources were used to implement the report generator:
 1. [pwd module and further options]
    (https://docs.python.org/3/library/pwd.html)
    (https://coderivers.org/blog/python-pwd/)
-                                    
-   
+
+## Assignment2.py citations:
+https://docs.python.org/3/library/argparse.html#sub-commands
+https://dnmtechs.com/using-argparse-subparsers-correctly-in-python-3-programming/
